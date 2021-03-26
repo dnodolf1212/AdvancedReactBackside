@@ -20,9 +20,9 @@ const GlobalStyles = createGlobalStyle`
     --gray: var(--grey);
     --lightGrey: #e1e1e1;
     --lightGray: var(---lightGray);
-    offWhite: #ededed;
+    --offWhite: #ededed;
     --maxWidth: 1000px;
-    --bs: 0 12px 24px 0 rgba()0,0,0,0.09
+    --bs: 0 12px 24px 0 rgba(0,0,0,0.09);
     box-sizing: border-box;
   }
   *, *:before, *:after {
@@ -31,7 +31,7 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: 'radnika_next', --apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, Oxygen, Ubuntum Cantarell, 'Open Sans', 
+    'Segoe UI', Roboto, Oxygen, Ubuntu Cantarell, 'Open Sans', 
     'Helvetica Neue', sans-serif;
     padding: 0;
     margin: 0;
