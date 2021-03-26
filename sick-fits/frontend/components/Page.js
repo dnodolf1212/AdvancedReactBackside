@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import Header from './Header';
 import { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
 
