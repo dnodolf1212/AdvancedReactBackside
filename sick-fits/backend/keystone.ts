@@ -1,9 +1,10 @@
 import { config, createSchema } from '@keystone-next/keystone/schema';
-import 'dotenv/config';
-import {User} from './schemas/User';
-import {Product} from './schemas/Products';
 import { createAuth } from '@keystone-next/auth';
-import {withItemData, statelessSessions} from '@keystone-next/keystone/session';
+import { withItemData, statelessSessions } from '@keystone-next/keystone/session';import 'dotenv/config';
+import { User } from './schemas/User';
+import { Product } from './schemas/Product';
+import { ProductImage } from './schemas/ProductImage';
+
 
 const databaseURL = 
 process.env.DATABASE_URL || 'mongodb://localhost/keystone-sick-fits-tutorial';
@@ -39,6 +40,7 @@ export default withAuth(config ({
     //show for UI for people who pass auth test
     User,
     Product,
+    ProductImage,
   }),
   ui: {
     
@@ -49,7 +51,7 @@ export default withAuth(config ({
   },
   session: withItemData(statelessSessions(sessionConfig), {
     //this is a GraphQL query
-    User: 'id'
+    User: 'id name email'
     }),
   })
 );
