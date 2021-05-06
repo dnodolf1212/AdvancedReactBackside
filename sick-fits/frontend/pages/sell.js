@@ -1,4 +1,9 @@
+import CreateProduct from "../components/CreateProduct";
 
 export default function SellPage() {
-  return <p>Sell Somthing from this page</p>
+  return (
+    <div>
+      <CreateProduct/>
+    </div>
+  )
 }
