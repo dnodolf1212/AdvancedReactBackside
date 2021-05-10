@@ -1,3 +1,4 @@
+import { CartItem } from './schemas/CartItem';
 import { createAuth } from '@keystone-next/auth';
 import { config, createSchema } from '@keystone-next/keystone/schema';
 import { withItemData, statelessSessions } from '@keystone-next/keystone/session';
@@ -54,6 +55,7 @@ export default withAuth(config ({
     User,
     Product,
     ProductImage,
+    CartItem
   }),
   ui: {
     
