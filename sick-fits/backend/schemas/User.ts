@@ -1,23 +1,22 @@
-import { list } from "@keystone-next/keystone/schema/dist/keystone.cjs";
+import { list } from '@keystone-next/keystone/schema/dist/keystone.cjs';
 import { text, password, relationship } from '@keystone-next/fields';
 
 export const User = list({
-  //access:
-  //ui
-  fields: { 
-  name: text( {isRequired: true} ),
-    email: text( {isRequired: true, isUnique: true} ), 
+  // access:
+  // ui
+  fields: {
+    name: text({ isRequired: true }),
+    email: text({ isRequired: true, isUnique: true }),
     password: password(),
     cart: relationship({
       ref: 'CartItem.user',
       many: true,
       ui: {
-        createView: {fieldMode: 'hidden'},
-        itemView: {fieldMode: 'read'},
-      }
-    })
-    //roles
-    //carts
-    //orders
-  }
-})
+        createView: { fieldMode: 'hidden' },
+        itemView: { fieldMode: 'read' },
+      },
+    }),
+    orders: relationship({ ref: 'Order.user', many: true }),
+    // roles
+  },
+});
