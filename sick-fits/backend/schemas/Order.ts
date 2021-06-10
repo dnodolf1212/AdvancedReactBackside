@@ -9,6 +9,7 @@ import {
   virtual,
 } from '@keystone-next/fields';
 import { User } from './User';
+
 import formatMoney from '../lib/formatMoney';
 
 export const Order = list({
